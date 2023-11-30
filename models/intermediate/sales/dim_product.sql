@@ -5,6 +5,6 @@ with
     )
 
 select 
-    --{{ dbt_utils.generate_surrogate_key('id') }}
-    *
+    {{ dbt_utils.generate_surrogate_key(['id']) }}
+    , *
 from staging
