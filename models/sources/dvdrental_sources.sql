@@ -1,3 +1,5 @@
+{{config(enabled=False)}}
+
 {{ codegen.generate_source(schema_name = 'RAW_DVDRENTAL', database_name = 'NORTHWIND', table_names = [
 "CITY"
 , "CUSTOMER"

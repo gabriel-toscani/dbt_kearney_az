@@ -1,3 +1,5 @@
+{{config(enabled=False)}}
+
 {{ codegen.generate_source(schema_name = 'RAW_NORTHWIND', database_name = 'NORTHWIND', table_names = [
 "ORDERDETAIL"
 , "CUSTOMER"
