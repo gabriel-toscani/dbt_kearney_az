@@ -1,0 +1,218 @@
+version: 2
+
+sources:
+  - name: raw_northwind
+    tables:
+      - name: orderdetail
+        columns:
+          - name: id
+            data_type: varchar
+          - name: orderid
+            data_type: number
+          - name: productid
+            data_type: number
+          - name: unitprice
+            data_type: number
+          - name: quantity
+            data_type: number
+          - name: discount
+            data_type: number
+
+      - name: customer
+        columns:
+          - name: id
+            data_type: varchar
+          - name: companyname
+            data_type: varchar
+          - name: contactname
+            data_type: varchar
+          - name: contacttitle
+            data_type: varchar
+          - name: address
+            data_type: varchar
+          - name: city
+            data_type: varchar
+          - name: region
+            data_type: varchar
+          - name: postalcode
+            data_type: varchar
+          - name: country
+            data_type: varchar
+          - name: phone
+            data_type: varchar
+          - name: fax
+            data_type: varchar
+
+      - name: territory
+        columns:
+          - name: id
+            data_type: number
+          - name: territorydescription
+            data_type: varchar
+          - name: regionid
+            data_type: number
+
+      - name: region
+        columns:
+          - name: id
+            data_type: number
+          - name: regiondescription
+            data_type: varchar
+
+      - name: us_states
+        columns:
+          - name: state_id
+            data_type: number
+          - name: state_name
+            data_type: varchar
+          - name: state_abbr
+            data_type: varchar
+          - name: state_region
+            data_type: varchar
+
+      - name: _order_
+        columns:
+          - name: id
+            data_type: number
+          - name: customerid
+            data_type: varchar
+          - name: employeeid
+            data_type: number
+          - name: orderdate
+            data_type: date
+          - name: requireddate
+            data_type: date
+          - name: shippeddate
+            data_type: date
+          - name: shipvia
+            data_type: number
+          - name: freight
+            data_type: number
+          - name: shipname
+            data_type: varchar
+          - name: shipaddress
+            data_type: varchar
+          - name: shipcity
+            data_type: varchar
+          - name: shipregion
+            data_type: varchar
+          - name: shippostalcode
+            data_type: varchar
+          - name: shipcountry
+            data_type: varchar
+
+      - name: category
+        columns:
+          - name: id
+            data_type: number
+          - name: categoryname
+            data_type: varchar
+          - name: description
+            data_type: varchar
+
+      - name: employee
+        columns:
+          - name: id
+            data_type: number
+          - name: lastname
+            data_type: varchar
+          - name: firstname
+            data_type: varchar
+          - name: title
+            data_type: varchar
+          - name: titleofcourtesy
+            data_type: varchar
+          - name: birthdate
+            data_type: date
+          - name: hiredate
+            data_type: date
+          - name: address
+            data_type: varchar
+          - name: city
+            data_type: varchar
+          - name: region
+            data_type: varchar
+          - name: postalcode
+            data_type: varchar
+          - name: country
+            data_type: varchar
+          - name: homephone
+            data_type: varchar
+          - name: extension
+            data_type: number
+          - name: photo
+            data_type: varchar
+          - name: notes
+            data_type: varchar
+          - name: reportsto
+            data_type: number
+          - name: photopath
+            data_type: varchar
+
+      - name: product
+        columns:
+          - name: id
+            data_type: number
+          - name: productname
+            data_type: varchar
+          - name: supplierid
+            data_type: number
+          - name: categoryid
+            data_type: number
+          - name: quantityperunit
+            data_type: varchar
+          - name: unitprice
+            data_type: number
+          - name: unitsinstock
+            data_type: number
+          - name: unitsonorder
+            data_type: number
+          - name: reorderlevel
+            data_type: number
+          - name: discontinued
+            data_type: number
+
+      - name: employeeterritory
+        columns:
+          - name: id
+            data_type: varchar
+          - name: employeeid
+            data_type: number
+          - name: territoryid
+            data_type: number
+
+      - name: supplier
+        columns:
+          - name: id
+            data_type: number
+          - name: companyname
+            data_type: varchar
+          - name: contactname
+            data_type: varchar
+          - name: contacttitle
+            data_type: varchar
+          - name: address
+            data_type: varchar
+          - name: city
+            data_type: varchar
+          - name: region
+            data_type: varchar
+          - name: postalcode
+            data_type: varchar
+          - name: country
+            data_type: varchar
+          - name: phone
+            data_type: varchar
+          - name: fax
+            data_type: varchar
+          - name: homepage
+            data_type: varchar
+
+      - name: shipper
+        columns:
+          - name: id
+            data_type: number
+          - name: companyname
+            data_type: varchar
+          - name: phone
+            data_type: varchar
