@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: int_join_orders_and_details
+    description: This table contains orders from our sales system
+    columns:
+      - name: customerid
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_raw_northwind__customer')
+              field: id
+              config:
+                severity: error
+                error_if: ">100"
+                warn_if: ">10"

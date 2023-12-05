@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: stg_raw_northwind___order_
+    description: This table contains orders from our sales system
+    columns:
+      - name: id
+        description: This is the unique ID for this table
+        data_type: number
+        tests:
+          - unique
+          - not_null
+      - name: customerid
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_raw_northwind__customer')
+              field: id
+              config:
+                severity: error
+                error_if: ">100"
+                warn_if: ">10"
+
+        description: This is the customer ID
+        data_type: varchar
+      - name: employeeid
+        data_type: number
+      - name: orderdate
+        description: Date the order was processed
+        data_type: date
+      - name: requireddate
+        data_type: date
+      - name: shippeddate
+        data_type: date
+      - name: shipvia
+        data_type: number
+      - name: freight
+        data_type: number
+      - name: shipname
+        data_type: varchar
+      - name: shipaddress
+        data_type: varchar
+      - name: shipcity
+        data_type: varchar
+      - name: shipregion
+        data_type: varchar
+      - name: shippostalcode
+        data_type: varchar
+      - name: shipcountry
+        data_type: varchar
