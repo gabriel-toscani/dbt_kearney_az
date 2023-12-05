@@ -100,6 +100,10 @@ sources:
             data_type: varchar
           - name: shipcountry
             data_type: varchar
+        freshness: # make this a little more strict
+          warn_after: {count: 3000, period: day}
+          error_after: {count: 4000, period: day}
+        loaded_at_field: cast(orderdate as timestamp)
 
       - name: category
         columns:

@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_raw_northwind__customer
+    description: This table contains data from our customers
+    columns:
+        - name: id
+          data_type: varchar
+          description: This is the primary key of the table
+        - name: companyname
+          description: Humanized name for the customer.
+          data_type: varchar
+        - name: contactname
+          data_type: varchar
+        - name: contacttitle
+          data_type: varchar
+        - name: address
+          data_type: varchar
+        - name: city
+          data_type: varchar
+        - name: region
+          data_type: varchar
+        - name: postalcode
+          data_type: varchar
+        - name: country
+          data_type: varchar
+        - name: phone
+          data_type: varchar
+        - name: fax
+          data_type: varchar
