@@ -18,7 +18,8 @@ renamed as (
         unitsinstock,
         unitsonorder,
         reorderlevel,
-        discontinued
+        discontinued,
+        'test' as test
 
     from source
 
